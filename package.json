@@ -1,0 +1,27 @@
+{
+  "name": "shelf",
+  "version": "1.0.0",
+  "description": "Asset manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wastedcode/shelf.git"
+  },
+  "author": "Inderpreet Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wastedcode/shelf/issues"
+  },
+  "homepage": "https://github.com/wastedcode/shelf#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.29"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
