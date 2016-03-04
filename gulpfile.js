@@ -34,7 +34,7 @@ gulp.task('compile-scss', function() {
 
 gulp.task('serve', ['compile-scss'], function() {
   //1. run your script as a server
-  var server = gls.new('app.js');
+  var server = gls.new('shelf.js');
   server.start();
 
   //use gulp.watch to trigger server actions(notify, start or stop)
@@ -43,7 +43,7 @@ gulp.task('serve', ['compile-scss'], function() {
   });
 
   // Restart the server
-  gulp.watch('myapp.js', function() {
+  gulp.watch('shelf.js', function() {
     server.start.bind(server)()
   });
 });

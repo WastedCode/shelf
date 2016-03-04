@@ -2,7 +2,7 @@
   "name": "shelf",
   "version": "1.0.0",
   "description": "Asset manager",
-  "main": "app.js",
+  "main": "shelf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
