@@ -8,6 +8,8 @@ var requestLogger = function (req, res, next) {
   next();
 };
 
+app.set('view engine', 'jade');
+
 app.use(requestLogger);
 app.use(express.static('./app/static'));
 app.use('/', rootRoutes);

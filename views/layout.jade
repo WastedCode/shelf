@@ -1,0 +1,17 @@
+include mixins/head
+
+doctype html
+html(lang="en")
+  head
+    block styles
+      link(rel='stylesheet', href='/stylesheets/application.css')
+    block meta
+      +meta-default(
+        "wasted code, coding, inderpreet singh, inder, isingh, shelf",
+        "Website for managing common assets used by Inder")
+    block title
+      title= "Wasted Code"
+
+  body
+    block content
+
