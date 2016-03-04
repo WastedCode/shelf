@@ -28,7 +28,7 @@ gulp.task('compile-scss', function() {
     .pipe(concat('application.css'))
     .pipe(prod(minifyCss()))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('static/stylesheets'))
+    .pipe(gulp.dest('app/static/stylesheets'))
 });
 
 
@@ -38,7 +38,7 @@ gulp.task('serve', ['compile-scss'], function() {
   server.start();
 
   //use gulp.watch to trigger server actions(notify, start or stop)
-  gulp.watch(['static/**/*.css', 'static/**/*.html'], function (file) {
+  gulp.watch(['app/static/**/*.css', 'app/static/**/*.html'], function (file) {
     server.notify.apply(server, [file]);
   });
 
