@@ -3,7 +3,8 @@ var app = express();
 var rootRoutes = require('./app/routes/root');
 
 var requestLogger = function (req, res, next) {
-  console.log(Date.now() + " - " + req.method + ": " + req.originalUrl);
+  req.requestTime = Date.now();
+  console.log(req.requestTime + " - " + req.method + ": " + req.originalUrl);
   next();
 };
 
