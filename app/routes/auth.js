@@ -7,7 +7,7 @@ router.get('/', passport.authenticate('github'));
 router.get('/github/callback', 
   passport.authenticate('github', { failureRedirect: '/login' }),
   controller.loginSuccess
-  );
+);
 
 module.exports = router;
 

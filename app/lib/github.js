@@ -21,6 +21,9 @@ exports.getGithubStrategy = function (){
     callbackURL: config.getConfig('githubCallbackURL')
   },
   function(accessToken, refreshToken, profile, done) {
+    if (profile.username !== 'isingh') {
+      return done("Not a whitelisted user: " + profile.username, null);
+    }
     done(
       null,
       new User(profile.username, profile.displayName));
