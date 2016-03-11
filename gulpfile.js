@@ -38,8 +38,8 @@ gulp.task('serve', ['compile-scss'], function() {
   server.start();
 
   //use gulp.watch to trigger server actions(notify, start or stop)
-  gulp.watch(['app/static/**/*.css', 'app/static/**/*.html'], function (file) {
-    server.notify.apply(server, [file]);
+  gulp.watch(['app/**/*.js', 'app/static/**/*.css', 'app/static/**/*.html'], function (file) {
+    server.start();
   });
 
   // Restart the server

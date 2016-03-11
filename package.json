@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wastedcode/shelf#readme",
   "dependencies": {
+    "cookie-session": "^2.0.0-alpha.1",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-continuous-concat": "^0.1.1",
@@ -27,9 +28,9 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5",
     "jade": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-github2": "^0.1.10",
     "pm2": "^1.0.2"
   },
-  "devDependencies": {
-    "gulp": "^3.9.1"
-  }
+  "devDependencies": {}
 }
