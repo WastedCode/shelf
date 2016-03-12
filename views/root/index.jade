@@ -1,4 +1,16 @@
 extends ./../layout.jade
 
 block content
-  = "More stuff"
+  main
+    form.small-element(action='/shelf' id="upload-form" name="upload-form" method="post" enctype="multipart/form-data")
+      div.caption Enter image for upload
+      input(type="file" id="uploadImage" name="uploadImage")
+      hr
+      div.form-entry
+        span.caption Height
+        input.xs-small(type="text" id="height" name="height")
+      div.form-entry
+        span.caption Width
+        input.xs-small(type="text" id="width" name="width")
+      hr
+      button(type="submit") Upload

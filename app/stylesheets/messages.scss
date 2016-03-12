@@ -1,0 +1,19 @@
+@import '_vars';
+
+#messages {
+  padding: 0px;
+  margin: 0px;
+  background-color: $messages-background-color;
+
+  ul {
+    padding: 5px;
+  }
+
+  .info {
+    color: $info-color;
+  }
+
+  .error {
+    color: $error-color;
+  }
+}

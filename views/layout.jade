@@ -10,8 +10,16 @@ html(lang="en")
         "wasted code, coding, inderpreet singh, inder, isingh, shelf",
         "Website for managing common assets used by Inder")
     block title
-      title= "Wasted Code"
+      title= "Shelf - Wasted Code"
 
   body
+    nav.top-nav
+      ul.top-nav
+        li
+          a(href="/") Home
+        li
+          a(href="/shelved") Shelved
+    != messages()
+
     block content
 
