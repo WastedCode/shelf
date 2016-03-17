@@ -1,4 +1,6 @@
 var exports = module.exports;
+var imageSize = require('image-size');
+var Image = require('./../models/image.js');
 
 function isValidImage(file) {
   var validMimes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -18,6 +20,13 @@ exports.addToShelf = function (req, res) {
   } else if (!isValidImage(req.files.uploadImage)) {
     req.flash("error", "Invalid image");
   } else {
+    console.log(req.files.uploadImage);
+    var dimensions = imageSize(req.files.uploadImage.file);
+    console.log(dimensions.width, dimensions.height);
+    var image = new Image();
+    image.createFromExistingImage(req.files.uploadImage, function(err) {
+      console.log(err);
+    });
     req.flash("info", "All good");
   };
 

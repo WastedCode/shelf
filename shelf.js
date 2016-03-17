@@ -6,6 +6,7 @@ var cookieSession = require('cookie-session');
 var flash = require('connect-flash');
 var messages = require('express-messages');
 var passport = require('passport');
+var path = require('path');
 
 var config = require('./app/lib/config');
 var github = require('./app/lib/github');
@@ -34,10 +35,10 @@ var checkForFlash = function(req, res, next) {
   next();
 };
 
+global.appRoot = path.resolve(__dirname);
 passport.use(github.getGithubStrategy());
 
 app.set('view engine', 'jade');
-
 app.use(cookieSession({
   name: 'session',
   keys: [config.getConfig('appSecret')]
@@ -48,6 +49,7 @@ app.use(requestLogger);
 app.use(flash());
 app.use(checkForFlash);
 app.use(express.static('./app/static'));
+app.use(express.static('./uploads'));
 app.use('/auth', authRoutes);
 app.use('/', isAuthenticated, rootRoutes);
 app.use('/shelf', isAuthenticated, shelfRoutes);
